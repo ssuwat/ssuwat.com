@@ -1,0 +1,3 @@
+[submodule "themes/semiyak"]
+	path = themes/semiyak
+	url = https://github.com/comfusion/seminyak

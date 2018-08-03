@@ -1,0 +1,4 @@
+baseURL = "https://ssuwat.com/"
+languageCode = "en-us"
+title = "Ssuwat"
+theme="semiyak"

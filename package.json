@@ -1,0 +1,13 @@
+{
+  "name": "ssuwat-website",
+  "version": "1.0.0",
+  "description": "SSUWAT company website",
+  "scripts": {
+    "dev": "hugo server -D",
+    "build": "hugo",
+    "build-css": "tailwindcss -i ./static/css/styles.css -o ./static/css/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}

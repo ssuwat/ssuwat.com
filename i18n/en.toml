@@ -1,0 +1,30 @@
+[nav]
+home = "Home"
+services = "Services"
+about = "About"
+contact = "Contact"
+
+[hero]
+title = "Custom Web Solutions"
+subtitle = "Perfect web services tailored for your business"
+cta = "Get in Touch"
+
+[services]
+title = "Services"
+web_pages = "Web Pages"
+web_pages_desc = "Responsive websites and landing pages"
+ecommerce = "E-commerce"
+ecommerce_desc = "Online shopping malls and payment systems"
+community = "Community"
+community_desc = "Forums, boards, and social platforms"
+admin_console = "Admin Console"
+admin_console_desc = "Data management and analytics dashboards"
+
+[about]
+title = "About SSUWAT"
+description = "We provide optimal web solutions tailored to our clients' requirements. With rich experience and cutting-edge technology, we successfully complete projects."
+
+[contact]
+title = "Contact"
+email = "Email"
+get_in_touch = "Get in Touch for Your Project"

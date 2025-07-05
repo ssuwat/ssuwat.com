@@ -1,0 +1,32 @@
+[tools]
+node = "latest"
+hugo = "latest"
+pnpm = "latest"
+
+[env]
+HUGO_ENVIRONMENT = "development"
+
+[tasks.install]
+run = "pnpm install"
+description = "Install dependencies"
+
+[tasks.dev]
+run = "pnpm run dev"
+description = "Start development server"
+
+[tasks.build]
+run = "pnpm run build"
+description = "Build the site"
+
+[tasks.build-css]
+run = "pnpm run build-css"
+description = "Build CSS with Tailwind"
+
+[tasks.deploy]
+run = [
+    "hugo",
+    "git add -A public/",
+    "git commit -m 'Deploy: Update site'",
+    "git subtree push --prefix public origin gh-pages"
+]
+description = "Build and deploy to GitHub Pages"

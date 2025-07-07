@@ -1,8 +1,9 @@
 [nav]
 home = "Home"
 services = "Services"
+portfolio = "Portfolio"
 about = "About"
-contact = "Contact"
+project_inquiry = "Project Inquiry"
 
 [hero]
 title = "Custom Web Solutions"
@@ -28,3 +29,15 @@ description = "We provide optimal web solutions tailored to our clients' require
 title = "Contact"
 email = "Email"
 get_in_touch = "Get in Touch for Your Project"
+
+[portfolio]
+title = "Portfolio"
+subtitle = "Our Completed Projects"
+visit_site = "Visit Site"
+event_tech = "Event Tech"
+social_platform = "Social Platform"
+
+[footer]
+representative = "Representative"
+business_number = "Business Registration Number"
+email = "Email"

@@ -1,0 +1,17 @@
+title: "Congkong Friends"
+url: "https://www.congkong.net/"
+category: "event_tech"
+weight: 1
+screenshot: "congkong-screenshot"
+icon:
+  name: "clipboard-check"
+  viewBox: "0 0 24 24"
+  path: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+color:
+  from: "blue-50"
+  to: "blue-100"
+  text: "blue-600"
+  icon: "blue-400"
+description:
+  ko: "11년간 1,500개 이상의 행사를 성공적으로 운영한 이벤트테크 플랫폼. 스마트 등록, 체크인 관리, 인터랙티브 Q&A, 참가자 데이터 분석 등 행사 전 과정을 지원하는 통합 솔루션입니다."
+  en: "Event technology platform with 11 years of experience and 1,500+ successful events. Integrated solution supporting the entire event lifecycle including smart registration, check-in management, interactive Q&A, and participant data analytics."

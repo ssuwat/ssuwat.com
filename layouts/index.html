@@ -9,7 +9,7 @@
             <p class="text-xl lg:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
                 {{ i18n "hero.subtitle" }}
             </p>
-            <a href="#contact" class="inline-block bg-gray-900 text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-colors duration-200 font-medium text-lg">
+            <a href="https://forms.gle/ACqeGfVBWTqJN6dRA" target="_blank" rel="noopener noreferrer" class="inline-block bg-gray-900 text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-colors duration-200 font-medium text-lg">
                 {{ i18n "hero.cta" }}
             </a>
         </div>
@@ -97,8 +97,66 @@
     </div>
 </section>
 
+<!-- Portfolio Section -->
+<section id="portfolio" class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                {{ i18n "portfolio.title" }}
+            </h2>
+            <p class="text-xl text-gray-600">
+                {{ i18n "portfolio.subtitle" }}
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {{ range $key, $value := .Site.Data.portfolio }}
+            <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                <div class="relative h-64 bg-gray-100 overflow-hidden">
+                    {{ $screenshotPng := printf "static/images/portfolio/%s.png" .screenshot }}
+                    {{ $screenshotJpg := printf "static/images/portfolio/%s.jpg" .screenshot }}
+                    {{ if fileExists $screenshotPng }}
+                    <img src="/images/portfolio/{{ .screenshot }}.png" alt="{{ .title }} Screenshot" class="w-full h-full object-cover object-top">
+                    {{ else if fileExists $screenshotJpg }}
+                    <img src="/images/portfolio/{{ .screenshot }}.jpg" alt="{{ .title }} Screenshot" class="w-full h-full object-cover object-top">
+                    {{ else }}
+                    <div class="flex items-center justify-center h-full bg-gradient-to-br from-{{ .color.from }} to-{{ .color.to }}">
+                        <div class="text-center">
+                            <svg class="w-16 h-16 text-{{ .color.icon }} mx-auto mb-3" fill="none" stroke="currentColor" viewBox="{{ .icon.viewBox }}">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="{{ .icon.path }}" />
+                            </svg>
+                            <span class="text-2xl font-bold text-{{ .color.text }}">{{ .title }}</span>
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">{{ .title }}</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        {{ if eq $.Site.Language.Lang "ko" }}
+                            {{ .description.ko }}
+                        {{ else }}
+                            {{ .description.en }}
+                        {{ end }}
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-500">{{ i18n (printf "portfolio.%s" .category) }}</span>
+                        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-gray-900 hover:text-gray-700 font-medium">
+                            {{ i18n "portfolio.visit_site" }}
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
 <!-- About Section -->
-<section id="about" class="bg-white py-20">
+<section id="about" class="bg-gray-50 py-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
             <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
@@ -121,8 +179,8 @@
             <p class="text-xl text-gray-600 mb-8">
                 {{ i18n "contact.get_in_touch" }}
             </p>
-            <a href="mailto:contact@ssuwat.com" class="inline-block bg-gray-900 text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-colors duration-200 font-medium text-lg">
-                {{ i18n "contact.email" }}
+            <a href="https://forms.gle/ACqeGfVBWTqJN6dRA" target="_blank" rel="noopener noreferrer" class="inline-block bg-gray-900 text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-colors duration-200 font-medium text-lg">
+                {{ i18n "hero.cta" }}
             </a>
         </div>
     </div>

@@ -1,0 +1,17 @@
+title: "Walk & Talk"
+url: "https://www.actionfriends.net/"
+category: "social_platform"
+weight: 2
+screenshot: "actionfriends-screenshot"
+icon:
+  name: "location-marker"
+  viewBox: "0 0 24 24"
+  path: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+color:
+  from: "purple-50"
+  to: "purple-100"
+  text: "purple-600"
+  icon: "purple-400"
+description:
+  ko: "위치 기반 소셜 인터랙션 플랫폼. 특정 장소에서 걷기와 대화를 결합한 새로운 형태의 소셜 경험을 제공합니다. 대화 카드와 추억 기록 기능으로 깊이 있는 인간관계를 형성합니다."
+  en: "Location-based social interaction platform combining walking and conversation for meaningful connections. Features guided conversation cards and memory tracking to create deeper interpersonal relationships through shared experiences."

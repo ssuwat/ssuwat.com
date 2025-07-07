@@ -11,16 +11,17 @@
             <nav class="hidden md:flex items-center space-x-8">
                 <a href="{{ .Site.Home.RelPermalink }}" class="text-gray-700 hover:text-gray-900 font-medium transition-colors">{{ i18n "nav.home" }}</a>
                 <a href="#services" class="text-gray-700 hover:text-gray-900 font-medium transition-colors">{{ i18n "nav.services" }}</a>
+                <a href="#portfolio" class="text-gray-700 hover:text-gray-900 font-medium transition-colors">{{ i18n "nav.portfolio" }}</a>
                 <a href="#about" class="text-gray-700 hover:text-gray-900 font-medium transition-colors">{{ i18n "nav.about" }}</a>
-                <a href="#contact" class="text-gray-700 hover:text-gray-900 font-medium transition-colors">{{ i18n "nav.contact" }}</a>
+                <a href="https://forms.gle/ACqeGfVBWTqJN6dRA" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:text-gray-900 font-medium transition-colors">{{ i18n "nav.project_inquiry" }}</a>
                 
                 <!-- Language switcher -->
                 <div class="flex items-center space-x-2 ml-4">
-                    {{ range .Site.Languages }}
+                    {{ range $.Site.Languages }}
                         {{ if eq .Lang $.Site.Language.Lang }}
                             <span class="text-gray-900 font-semibold">{{ .Lang | upper }}</span>
                         {{ else }}
-                            <a href="{{ .Lang | relLangURL }}" class="text-gray-500 hover:text-gray-900 transition-colors">{{ .Lang | upper }}</a>
+                            <a href="{{ if eq .Lang "ko" }}/{{ else }}/{{ .Lang }}/{{ end }}" class="text-gray-500 hover:text-gray-900 transition-colors">{{ .Lang | upper }}</a>
                         {{ end }}
                     {{ end }}
                 </div>

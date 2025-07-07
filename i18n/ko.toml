@@ -1,8 +1,9 @@
 [nav]
 home = "홈"
-services = "서비스" 
+services = "서비스"
+portfolio = "포트폴리오"
 about = "소개"
-contact = "연락처"
+project_inquiry = "프로젝트 문의"
 
 [hero]
 title = "맞춤형 웹 솔루션"
@@ -28,3 +29,15 @@ description = "우리는 고객의 요구사항에 맞춘 최적의 웹 솔루�
 title = "연락처"
 email = "이메일"
 get_in_touch = "프로젝트 문의하기"
+
+[portfolio]
+title = "포트폴리오"
+subtitle = "우리가 완성한 프로젝트들"
+visit_site = "사이트 방문"
+event_tech = "이벤트테크"
+social_platform = "소셜 플랫폼"
+
+[footer]
+representative = "대표자"
+business_number = "사업자등록번호"
+email = "이메일"

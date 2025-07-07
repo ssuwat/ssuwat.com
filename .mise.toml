@@ -23,10 +23,5 @@ run = "pnpm run build-css"
 description = "Build CSS with Tailwind"
 
 [tasks.deploy]
-run = [
-    "hugo",
-    "git add -A public/",
-    "git commit -m 'Deploy: Update site'",
-    "git subtree push --prefix public origin gh-pages"
-]
-description = "Build and deploy to GitHub Pages"
+run = "./scripts/deploy.sh"
+description = "Build and deploy to GitHub Pages using git worktree"
